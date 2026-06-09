@@ -1,0 +1,7 @@
+# Mission Control AI — EnviroSat
+# Dependencias minimas — versoes fixadas para reprodutibilidade (secao 4.1 / 5.1)
+ollama==0.6.2
+python-dotenv==1.2.2
+rich==15.0.0
+prompt_toolkit==3.0.52
+pyfiglet==1.0.4

@@ -1,0 +1,33 @@
+{
+  "descricao": "Cenarios pre-definidos para teste do EnviroSat-1. Use o nome do cenario na pergunta (ex.: 'simule incendio') ou carregue manualmente em testes.",
+  "cenarios": {
+    "normal": {
+      "titulo": "Operacao normal",
+      "esperado": "Severidade OK, nenhuma intervencao."
+    },
+    "incendio_amazonia": {
+      "titulo": "Incendio detectado na Amazonia + buffer alto",
+      "esperado": "ATENCAO (47 focos) + CRITICO (buffer 88%); priorizar downlink e notificar INPE."
+    },
+    "falha_sensor_termico": {
+      "titulo": "Sensor termico degradado",
+      "esperado": "CRITICO; deteccoes marcadas como baixa confianca, risco de nao ver incendio inicial."
+    },
+    "bateria_critica": {
+      "titulo": "Bateria critica",
+      "esperado": "CRITICO; modo economia ativado, sensor optico desligado."
+    },
+    "sobreaquecimento": {
+      "titulo": "Payload optico superaquecendo (58 C)",
+      "esperado": "CRITICO; reorientar satelite para reduzir exposicao solar."
+    },
+    "perda_geolocalizacao": {
+      "titulo": "Erro de geolocalizacao (180 m) com focos ativos",
+      "esperado": "CRITICO; focos detectados mas coordenada nao confiavel — brigada iria ao lugar errado."
+    },
+    "buffer_cheio": {
+      "titulo": "Buffer de imagens saturado (97%)",
+      "esperado": "CRITICO; capturas pausadas ate liberar espaco."
+    }
+  }
+}
